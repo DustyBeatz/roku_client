@@ -13,7 +13,8 @@ router.use('/api', createProxyMiddleware({
 }))
 
 router.get("/", (req, res)=> {
-    res.send("hit the main route");
+    res.render('index', {message: "This is the index page"})
+    
 })
 
 module.exports = router;
